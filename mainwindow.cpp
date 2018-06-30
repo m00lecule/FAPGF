@@ -421,7 +421,6 @@ void MainWindow::Clean()
         {
             FAPGF fapgf(*(dt),SB_D_Parameter->value(),static_cast<Distance>(ComboBox->currentIndex()),temporary);
             fapgf.detect();
-            //fapgf.detect_CUDA();
             AF.filterImage(&fapgf,distrb);
             Accuracy->display(fapgf.Accuracy(*ctri)*100);
 
